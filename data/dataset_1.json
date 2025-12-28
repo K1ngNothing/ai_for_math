@@ -1,0 +1,68 @@
+[
+    {
+        "task_id": 0,
+        "topic": "algebra",
+        "statement": "Let $a$ and $b$ be the two real values of $x$ for which\\[\\sqrt[3]{x} + \\sqrt[3]{20 - x} = 2\\]The smaller of the two values can be expressed as $p - \\sqrt{q}$, where $p$ and $q$ are integers. Compute $p + q$.",
+        "answer": "118"
+    },
+    {
+        "task_id": 1,
+        "topic": "algebra",
+        "statement": "For how many integer values of $x$ is $5x^{2}+19x+16 > 20$ not satisfied?",
+        "answer": "5"
+    },
+    {
+        "task_id": 2,
+        "topic": "algebra",
+        "statement": "A car is averaging 50 miles per hour. If the car maintains this speed, how many minutes less would a 450-mile trip take than a 475-mile trip?",
+        "answer": "30"
+    },
+    {
+        "task_id": 3,
+        "topic": "algebra",
+        "statement": "Find the greatest common divisor of $10293$ and $29384$.",
+        "answer": "1"
+    },
+    {
+        "task_id": 4,
+        "topic": "algebra",
+        "statement": "How many ounces of pure water must be added to $30$ ounces of a $30\\%$ solution of acid to yield a solution that is $20\\%$ acid?",
+        "answer": "15"
+    },
+    {
+        "task_id": 5,
+        "topic": "probability",
+        "statement": "An octahedron consists of two square-based pyramids glued together along their square bases to form a polyhedron with eight faces. Imagine an ant that begins at the top vertex and walks to one of the four adjacent vertices that he randomly selects and calls vertex A. From vertex A, he will then walk to one of the four adjacent vertices that he randomly selects and calls vertex B. What is the probability that vertex B will be the bottom vertex? Express your answer as a common fraction.\n\n[asy]\ndraw((-10,0)--(10,0)--(3,-15)--cycle);\ndraw((-10,0)--(10,0)--(3,15)--cycle);\ndraw((10,0)--(17,7)--(3,-15)--(17,7)--(3,15));\ndraw((-3,7)--(3,15)--(-3,7)--(17,7)--(-3,7)--(-10,0)--(-3,7)--(3,-15),dashed);\n[/asy]",
+        "answer": "\\frac{1}{4}"
+    },
+    {
+        "task_id": 6,
+        "topic": "combinatorics",
+        "statement": "Suppose I have 6 shirts, 4 ties, and 3 pairs of pants. If an outfit requires a shirt and pants, and can either have a tie or not have a tie, how many outfits can I make?",
+        "answer": "90"
+    },
+    {
+        "task_id": 7,
+        "topic": "trigonometry",
+        "statement": "In right triangle $ABC$ with $\\angle A = 90^\\circ$, we have $AB =16$ and $BC = 24$. Find $\\sin A$.",
+        "answer": "1"
+    },
+    {
+        "task_id": 8,
+        "topic": "algebra",
+        "statement": "If $\\sqrt{5 + x} + \\sqrt{20 - x} = 7$, what is the value of $(5 + x)(20 - x)$?",
+        "answer": "144"
+    },
+    {
+        "task_id": 9,
+        "topic": "algebra",
+        "statement": "Find the sum of the coefficients in the polynomial $3(3x^{7} + 8x^4 - 7) + 7(x^5 - 7x^2 + 5)$ when it is fully simplified.",
+        "answer": "5"
+    },
+    {
+        "task_id": 10,
+        "topic": "combinatorics",
+        "statement": "A mother purchases 5 blue plates, 2 red plates, 2 green plates, and 1 orange plate. How many ways are there for her to arrange these plates for dinner around her circular table if she doesn't want the 2 green plates to be adjacent?",
+        "answer": "588"
+    }
+]
