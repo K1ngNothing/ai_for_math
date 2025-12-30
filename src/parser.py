@@ -36,9 +36,9 @@ class ResponseParser:
         answer_match = re.search(r'\[CORRECTED_ANSWER\](.*?)\[/CORRECTED_ANSWER\]', response_text, re.DOTALL)
         
         return {
-            'feedback_summary': summary_match.group(1).strip() if summary_match else None,
-            'corrected_solution': solution_match.group(1).strip() if solution_match else None,
-            'corrected_answer': answer_match.group(1).strip() if answer_match else None,
+            'feedback': summary_match.group(1).strip() if summary_match else None,
+            'solution': solution_match.group(1).strip() if solution_match else None,
+            'answer': answer_match.group(1).strip() if answer_match else None,
             'full': response_text
         }
         

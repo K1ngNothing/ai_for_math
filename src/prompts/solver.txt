@@ -28,6 +28,7 @@ IMPORTANT RULES:
 4. Do not add anything after the [ANSWER] block
 5. If the problem requires calculations, show all calculations
 6. You MUST include the closing tags [/SOLUTION] and [/ANSWER] exactly as shown.
+7. Text must be represented in markdown format
 
 Now solve the following problem:
 ====

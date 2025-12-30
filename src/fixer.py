@@ -1,9 +1,10 @@
 from agent import Agent
+from logTools import LogLevel
 
 
 class Fixer(Agent):
-    def __init__(self):
-        super().__init__()
+    def __init__(self, log_level):
+        super().__init__(log_level)
 
         self.fixer_prompt = self._read_sys_prompt('prompts/fixer.txt')
         self.agent_name = 'Fixer'
@@ -21,14 +22,16 @@ class Fixer(Agent):
     
     def fix(self, task, solution, feedback):
         prompt = self._make_fixer_prompt(task, solution, feedback)
-        self._log(f'Sending response to llm with prompt: {prompt}')
+        self._log(LogLevel.RELEASE, f'Sending request to llm...')
+        self._log(LogLevel.DEBUG, f'Fixer prompt: {prompt}')
         response = self._send_request(prompt)
         if response['content']:
-            self._log(f'Recived fixes from llm:\n{response}')
+            self._log(LogLevel.DEBUG, f'Recived fixes from llm:\n{response}')
+            self._log(LogLevel.RELEASE, f'Parsing response...')
             solution = self._parse_response(response['content'])
-            self._log(f'Recived feedback summary from llm:\n{solution['feedback_summary']}')
-            self._log(f'Recived corrected solution from llm:\n{solution['corrected_solution']}')
-            self._log(f'Recived corrected answer from llm:\n{solution['corrected_answer']}')
+            self._log(LogLevel.DEBUG, f'Recived feedback summary from llm:\n{solution['feedback']}')
+            self._log(LogLevel.DEBUG, f'Recived corrected solution from llm:\n{solution['solution']}')
+            self._log(LogLevel.RELEASE, f'Recived corrected answer from llm: {solution['answer']}')
             return solution
         else:
             raise RuntimeError(f'error during solving task {response['error']}')

@@ -29,6 +29,7 @@ IMPORTANT RULES:
 4. If feedback is contradictory - follow logic and mathematics
 5. Clearly mark corrected parts
 6. You MUST include the closing tags [/FEEDBACK_SUMMARY], [/CORRECTED_SOLUTION] and [/CORRECTED_ANSWER] exactly as shown.
+7. Text must be represented in markdown format
 
 Now correct the solution based on the following feedback:
 ====

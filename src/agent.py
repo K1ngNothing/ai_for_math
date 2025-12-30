@@ -1,10 +1,13 @@
 from llm import LLM
 from parser import ResponseParser
+from logTools import COLOR_CODES
+
 
 class Agent:
-    def __init__(self):
+    def __init__(self, log_level):
         self.agent_name = ''
         self.color = ''
+        self.log_level = log_level
         
         self.response_parser = ResponseParser()
         api_key = ''
@@ -25,15 +28,10 @@ class Agent:
     def _send_request(self, prompt):
         return self.llm.send_request(prompt)
 
-    def _log(self, info):
+    def _log(self, level, info):
+        if level > self.log_level:
+            return
+        
         import time
-        color_codes = {
-            'red': '\033[91m', 
-            'green': '\033[92m', 
-            'yellow': '\033[93m', 
-            'blue': '\033[94m', 
-            'magenta': '\033[95m', 
-            'cyan': '\033[96m'
-        }
         current_time = time.strftime('%H:%M:%S')
-        print(f"{color_codes.get(self.color, '')}[{current_time}][{self.agent_name}]: {info}\033[0m")
+        print(f"[{current_time}]{COLOR_CODES.get(self.color, '')}[{self.agent_name}]: {info}\033[0m")
