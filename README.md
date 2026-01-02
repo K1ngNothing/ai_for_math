@@ -9,3 +9,9 @@
 Система будет работать через API LLM, где агенты взаимодействуют по чёткому протоколу, имитируя работу “педагогической команды”. Дополнительно возможно интегрировать `SymPy` или `Wolfram Alpha` через function calling для проверки и расчётов.
 
 Подробный план проекта, таймлайн его выполнения и финальные результаты отражены в [Google Doc](https://docs.google.com/document/d/1_VHg8ExH8BJVLfXHY7-XOwSwFmaxtwgonmlgO18QJ7Y/edit?tab=t.0).
+
+# Запуск системы
+1. CLI: `python src/cli.py`
+2. Streamlit: `streamlit run src/streamlit_app.py`
+3. FastAPI сервер: `cd src && streamlit run src/streamlit_app.py`
+   Пример запроса к серверу: `curl -X POST "http://localhost:8000/forward"   -H "Content-Type: application/json"   -d '{"statement": "A = 2, B = 2. What is A + B?"}'`
