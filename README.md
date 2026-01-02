@@ -13,5 +13,5 @@
 # Запуск системы
 1. CLI: `python src/cli.py`
 2. Streamlit: `streamlit run src/streamlit_app.py`
-3. FastAPI сервер: `cd src && streamlit run src/streamlit_app.py`
+3. FastAPI сервер: `cd src && uvicorn api:app --host 0.0.0.0 --port 8000 --reload`
    Пример запроса к серверу: `curl -X POST "http://localhost:8000/forward"   -H "Content-Type: application/json"   -d '{"statement": "A = 2, B = 2. What is A + B?"}'`
