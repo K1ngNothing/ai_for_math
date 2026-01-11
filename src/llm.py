@@ -59,6 +59,6 @@ if __name__ == '__main__':
     with open('../api-key') as file:
         api_key = file.read()
     llm = LLM(api_key=api_key, model='gemini/gemini-3-flash-preview', temperature=1.0)
-    prompt = "HI! please, write Hello world programm on c++"
+    prompt = "HI! please, write Hello world program on c++"
     response = llm.send_request(prompt)
     print(response)

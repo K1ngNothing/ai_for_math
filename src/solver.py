@@ -15,12 +15,12 @@ class Solver(Agent):
 
     def solve(self, task):
         prompt = self.solver_prompt + task
-        self._log(LogLevel.RELEASE, f'Sending request to llm...')
+        self._log(LogLevel.RELEASE, 'Sending request to llm...')
         self._log(LogLevel.DEBUG, f'Solver prompt: {prompt}')
         response = self._send_request(prompt)
         if response['content']:
-            self._log(LogLevel.DEBUG, f'Recived solution from llm:\n{response}')
-            self._log(LogLevel.RELEASE, f'Parsing response...')
+            self._log(LogLevel.DEBUG, f'Received solution from llm:\n{response}')
+            self._log(LogLevel.RELEASE, 'Parsing response...')
             solution = self._parse_response(response['content'])
             self._log(LogLevel.DEBUG, f'Extracted solution is:\n{solution['solution']}')
             self._log(LogLevel.RELEASE, f'Extracted answer is: {solution['answer']}')

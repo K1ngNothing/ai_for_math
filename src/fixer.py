@@ -22,16 +22,16 @@ class Fixer(Agent):
 
     def fix(self, task, solution, feedback):
         prompt = self._make_fixer_prompt(task, solution, feedback)
-        self._log(LogLevel.RELEASE, f'Sending request to llm...')
+        self._log(LogLevel.RELEASE, 'Sending request to llm...')
         self._log(LogLevel.DEBUG, f'Fixer prompt: {prompt}')
         response = self._send_request(prompt)
         if response['content']:
-            self._log(LogLevel.DEBUG, f'Recived fixes from llm:\n{response}')
-            self._log(LogLevel.RELEASE, f'Parsing response...')
+            self._log(LogLevel.DEBUG, f'Received fixes from llm:\n{response}')
+            self._log(LogLevel.RELEASE, 'Parsing response...')
             solution = self._parse_response(response['content'])
-            self._log(LogLevel.DEBUG, f'Recived feedback summary from llm:\n{solution['feedback']}')
-            self._log(LogLevel.DEBUG, f'Recived corrected solution from llm:\n{solution['solution']}')
-            self._log(LogLevel.RELEASE, f'Recived corrected answer from llm: {solution['answer']}')
+            self._log(LogLevel.DEBUG, f'Received feedback summary from llm:\n{solution['feedback']}')
+            self._log(LogLevel.DEBUG, f'Received corrected solution from llm:\n{solution['solution']}')
+            self._log(LogLevel.RELEASE, f'Received corrected answer from llm: {solution['answer']}')
             return solution
         else:
             raise RuntimeError(f'error during solving task {response['error']}')
