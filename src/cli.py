@@ -6,12 +6,12 @@ from logTools import LogLevel, COLOR_CODES
 if __name__ == '__main__':
     generator = TaskGenerator()
     task_results = {}
-    
+
     for _ in range(len(generator)):
         task = generator.generate_task()
         task_id = task['task_id']
         task_results[task_id] = [task['answer'], None]
-        
+
         try:
             coordinator = Coordinator(LogLevel.RELEASE)
             result = coordinator.solve(task['statement'])

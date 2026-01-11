@@ -16,7 +16,7 @@ class LLM:
         self.headers = {
             'Content-Type': 'application/json'
         }
-        
+
         if self.api_key:
             self.headers['Authorization'] = f'Bearer {self.api_key}'
 
@@ -32,24 +32,24 @@ class LLM:
             }
             if self.temperature:
                 payload['temperature'] = self.temperature
-            
+
             response = requests.post(
                 f'{self.host}/chat/completions',
                 headers=self.headers,
                 json=payload,
                 timeout=self.timeout
             )
-            
+
             response.raise_for_status()
-            
+
             result = response.json()
             content = result['choices'][0]['message']['content'].strip()
-            
+
             return {
                 'status': ResponseStatus.OK,
                 'content': content
             }
-            
+
         except requests.exceptions.Timeout:
             raise RuntimeError('timeout expired')
 

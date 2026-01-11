@@ -42,22 +42,22 @@ if st.button("Решить", type="primary"):
     if problem.strip():
         try:
             coordinator = Coordinator(LogLevel.RELEASE)
-            
+
             with st.spinner("Решаю..."):
                 result = coordinator.solve(problem)
-            
+
             st.markdown("### Результат:")
-            
+
             if isinstance(result, dict):
                 if 'answer' in result and result['answer']:
                     st.markdown(f"**Ответ:** `{result['answer']}`")
-                
+
                 if 'solution' in result and result['solution']:
                     with st.expander("Показать полное решение"):
                         st.markdown(result['solution'])
             else:
                 st.markdown(f"**Ответ:** `{result}`")
-                
+
         except Exception as e:
             st.error(f"Ошибка: {str(e)}")
     else:
