@@ -1,6 +1,7 @@
 from llm import LLM
 from parser import ResponseParser
 from logTools import COLOR_CODES
+from utils import get_llm_api_key
 
 
 class Agent:
@@ -10,9 +11,7 @@ class Agent:
         self.log_level = log_level
 
         self.response_parser = ResponseParser()
-        api_key = ''
-        with open('../api-key') as file:
-            api_key = file.read()
+        api_key = get_llm_api_key()
         # self.llm =  LLM(api_key=api_key, model='gemini/gemini-3-flash-preview', temperature=1.0)
         self.llm =  LLM(api_key=api_key, model='openai/gpt-4.1', temperature=0.7)
         # self.llm =  LLM(api_key=api_key, model='openai/gpt-4.1-mini', temperature=0.7)

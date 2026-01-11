@@ -1,5 +1,6 @@
 import requests
 from enum import Enum
+from utils import get_llm_api_key
 
 
 class ResponseStatus(str, Enum):
@@ -55,9 +56,7 @@ class LLM:
 
 
 if __name__ == '__main__':
-    api_key = ''
-    with open('../api-key') as file:
-        api_key = file.read()
+    api_key = get_llm_api_key()
     llm = LLM(api_key=api_key, model='gemini/gemini-3-flash-preview', temperature=1.0)
     prompt = "HI! please, write Hello world program on c++"
     response = llm.send_request(prompt)
