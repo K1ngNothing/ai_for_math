@@ -1,0 +1,122 @@
+[
+    {
+        "task_id": 0,
+        "topic": null,
+        "statement": "Given that the variance of a set of data is $S^{2}=\\frac{1}{5}[\\left(6-10\\right)^{2}+\\left(9-10\\right)^{2}+\\left(a-10\\right)^{2}+\\left(11-10\\right)^{2}+\\left(b-10\\right)^{2}]=6.8$, then the value of $a^{2}+b^{2}$ is ____.",
+        "answer": "296"
+    },
+    {
+        "task_id": 1,
+        "topic": null,
+        "statement": "Two families of three, with a total of $4$ adults and $2$ children, agree to go on a countryside trip together on Sunday using two cars, an \"Audi\" and a \"Jetta\". Each car can accommodate a maximum of $4$ people, and the two children cannot be left alone in one car. Determine the number of different seating arrangements possible.",
+        "answer": "48"
+    },
+    {
+        "task_id": 2,
+        "topic": null,
+        "statement": "Consider integers \\( \\{1, 2, \\ldots, 10\\} \\). A particle is initially at 1. It moves to an adjacent integer in the next step. What is the expected number of steps it will take to reach 10 for the first time?",
+        "answer": "90"
+    },
+    {
+        "task_id": 3,
+        "topic": null,
+        "statement": "For how many $n$ with $1 \\leq n \\leq 100$ can a unit square be divided into $n$ congruent figures?",
+        "answer": "100"
+    },
+    {
+        "task_id": 4,
+        "topic": null,
+        "statement": "Given that $x = \\frac{5}{7}$ is a solution to the equation $56 x^2 + 27 = 89x - 8,$ what is the other value of $x$ that will solve the equation? Express your answer as a common fraction.",
+        "answer": "\\frac{7}{8}"
+    },
+    {
+        "task_id": 5,
+        "topic": null,
+        "statement": "A TV station is broadcasting 5 advertisements in a row, including 3 different commercial advertisements and 2 different public service advertisements. The last advertisement cannot be a commercial one, and the two public service advertisements cannot be broadcast consecutively. How many different broadcasting methods are there? (Answer with a number).",
+        "answer": "36"
+    },
+    {
+        "task_id": 6,
+        "topic": null,
+        "statement": "Let \\( a_{1}, a_{2}, \\ldots, a_{9} \\) be nine real numbers, not necessarily distinct, with average \\( m \\). Let \\( A \\) denote the number of triples \\( 1 \\leq i<j<k \\leq 9 \\) for which \\( a_{i}+a_{j}+a_{k} \\geq 3m \\). What is the minimum possible value of \\( A \\)?",
+        "answer": "28"
+    },
+    {
+        "task_id": 7,
+        "topic": null,
+        "statement": "Let $\\phi$ be the smallest acute angle for which $\\cos \\phi,$ $\\cos 2\\phi,$ $\\cos 4\\phi$ form an arithmetic progression, in some order. Find $\\sin \\phi.$",
+        "answer": "\\frac{1}{\\sqrt{2}}"
+    },
+    {
+        "task_id": 8,
+        "topic": null,
+        "statement": "Expand the following expression: $(9x+4)\\cdot 2x^2$",
+        "answer": "18x^3+8x^2"
+    },
+    {
+        "task_id": 9,
+        "topic": null,
+        "statement": "If $a$ and $b$ are positive numbers such that $a^b=b^a$ and $b=9a$, then the value of $a$ is",
+        "answer": "\\sqrt[4]{3}"
+    },
+    {
+        "task_id": 10,
+        "topic": null,
+        "statement": "How many distinct $x$-intercepts does the graph of $y = (x-5)(x^2+5x+6)$ have?",
+        "answer": "3"
+    },
+    {
+        "task_id": 11,
+        "topic": null,
+        "statement": "Find the ratio of the volume of the cone to the volume of the cylinder. Express your answer as a common fraction.\n\n[asy]\nimport solids; size(150); import three; defaultpen(linewidth(0.8)); currentprojection = orthographic(5,0,3);\nrevolution c = cylinder((0,0,0), 1, 3);\nrevolution c2 = cone((0,0,0), 1,1.5);\ndraw(c,black);\ndraw(c2,black);\n\ndraw((1.5,0)--(1.5,2.5),Arrows(TeXHead));\nlabel(\"12\",(1.5,0)--(1.5,2.5),E);\ndraw((-1.5,0)--(-1.5,1.25),Arrows(TeXHead));\nlabel(\"6\",(-1.5,0)--(-1.5,1.25),W);\n\ndraw((0,0)--(1,0),Arrows(TeXHead));\nlabel(\"4\",(0,0)--(1,0),S);\n[/asy]",
+        "answer": "\\frac{1}{6}"
+    },
+    {
+        "task_id": 12,
+        "topic": null,
+        "statement": "Define the operations: \n\\( a \\bigcirc b = a^{\\log _{7} b} \\),\n\\( a \\otimes b = a^{\\frac{1}{\\log ^{6} b}} \\), where \\( a, b \\in \\mathbb{R} \\). \n\nA sequence \\(\\{a_{n}\\} (n \\geqslant 4)\\) is given such that:\n\\[ a_{3} = 3 \\otimes 2, \\quad a_{n} = (n \\otimes (n-1)) \\bigcirc a_{n-1}. \\]\n\nThen, the integer closest to \\(\\log _{7} a_{2019}\\) is:",
+        "answer": "11"
+    },
+    {
+        "task_id": 13,
+        "topic": null,
+        "statement": "The sum of a positive number and its square is 156. What is the number?",
+        "answer": "12"
+    },
+    {
+        "task_id": 14,
+        "topic": null,
+        "statement": "Find the positive real number $x$ for which\n\\[5 \\sqrt{1 + x} + 5 \\sqrt{1 - x} = 7 \\sqrt{2}.\\]",
+        "answer": "\\frac{7}{25}"
+    },
+    {
+        "task_id": 15,
+        "topic": null,
+        "statement": "If $z=1+i$, then $|{iz+3\\overline{z}}|=\\_\\_\\_\\_\\_\\_$.",
+        "answer": "2\\sqrt{2}"
+    },
+    {
+        "task_id": 16,
+        "topic": null,
+        "statement": "Two fair coins are simultaneously flipped. This is done repeatedly until at least one of the coins comes up heads, at which point the process stops. What is the probability that the other coin also came up heads on this last flip?",
+        "answer": "1/3"
+    },
+    {
+        "task_id": 17,
+        "topic": null,
+        "statement": "Determine the least possible value of $f(1998),$ where $f:\\Bbb{N}\\to \\Bbb{N}$ is a function such that for all $m,n\\in {\\Bbb N}$, \n\n\\[f\\left( n^{2}f(m)\\right) =m\\left( f(n)\\right) ^{2}. \\]",
+        "answer": "120"
+    },
+    {
+        "task_id": 18,
+        "topic": null,
+        "statement": "Two concentric circles have radii of 24 and 36 units, respectively. A shaded region is formed between these two circles. A new circle is to be drawn such that its diameter is equal to the area of the shaded region. What must the diameter of this new circle be? Express your answer in simplest radical form.",
+        "answer": "720 \\pi"
+    },
+    {
+        "task_id": 19,
+        "topic": null,
+        "statement": "The line $l_{1}: x+a^{2}y+6=0$ and the line $l_{2}: (a-2)x+3ay+2a=0$ are parallel, find the value of $a$.",
+        "answer": "-1"
+    }
+]
