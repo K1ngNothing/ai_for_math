@@ -19,7 +19,7 @@
     },
     {
         "task_id": 3,
-        "topic": "algebra",
+        "topic": "number theory",
         "statement": "Find the greatest common divisor of $10293$ and $29384$.",
         "answer": "1"
     },

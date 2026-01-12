@@ -2,7 +2,7 @@ import json
 
 
 class TaskGenerator:
-    def __init__(self, json_file_path='../data/dataset_1.json'):
+    def __init__(self, json_file_path='../data/dataset_simple.json'):
         with open(json_file_path, 'r') as file:
             self.tasks = json.load(file)
         self.current_index = 0
