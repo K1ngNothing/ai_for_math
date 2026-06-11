@@ -22,9 +22,9 @@ class Checker(Agent):
             self._log(LogLevel.DEBUG, f'Received review from llm:\n{response}')
             self._log(LogLevel.RELEASE, 'Parsing response...')
             solution = self._parse_response(response['content'])
-            self._log(LogLevel.DEBUG, f'Received analysis from llm:\n{solution['analysis']}')
-            self._log(LogLevel.DEBUG, f'Received issues from llm:\n{solution['issues']}')
-            self._log(LogLevel.RELEASE, f'Received verdict from llm: {solution['verdict']}')
+            self._log(LogLevel.DEBUG, f'Received analysis from llm:\n{solution["analysis"]}')
+            self._log(LogLevel.DEBUG, f'Received issues from llm:\n{solution["issues"]}')
+            self._log(LogLevel.RELEASE, f'Received verdict from llm: {solution["verdict"]}')
             return solution
         else:
-            raise RuntimeError(f'error during solving task {response['error']}')
+            raise RuntimeError(f'error during solving task {response["error"]}')

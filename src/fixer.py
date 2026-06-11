@@ -29,9 +29,9 @@ class Fixer(Agent):
             self._log(LogLevel.DEBUG, f'Received fixes from llm:\n{response}')
             self._log(LogLevel.RELEASE, 'Parsing response...')
             solution = self._parse_response(response['content'])
-            self._log(LogLevel.DEBUG, f'Received feedback summary from llm:\n{solution['feedback']}')
-            self._log(LogLevel.DEBUG, f'Received corrected solution from llm:\n{solution['solution']}')
-            self._log(LogLevel.RELEASE, f'Received corrected answer from llm: {solution['answer']}')
+            self._log(LogLevel.DEBUG, f'Received feedback summary from llm:\n{solution["feedback"]}')
+            self._log(LogLevel.DEBUG, f'Received corrected solution from llm:\n{solution["solution"]}')
+            self._log(LogLevel.RELEASE, f'Received corrected answer from llm: {solution["answer"]}')
             return solution
         else:
-            raise RuntimeError(f'error during solving task {response['error']}')
+            raise RuntimeError(f'error during solving task {response["error"]}')

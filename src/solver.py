@@ -22,8 +22,8 @@ class Solver(Agent):
             self._log(LogLevel.DEBUG, f'Received solution from llm:\n{response}')
             self._log(LogLevel.RELEASE, 'Parsing response...')
             solution = self._parse_response(response['content'])
-            self._log(LogLevel.DEBUG, f'Extracted solution is:\n{solution['solution']}')
-            self._log(LogLevel.RELEASE, f'Extracted answer is: {solution['answer']}')
+            self._log(LogLevel.DEBUG, f'Extracted solution is:\n{solution["solution"]}')
+            self._log(LogLevel.RELEASE, f'Extracted answer is: {solution["answer"]}')
             return solution
         else:
-            raise RuntimeError(f'error during solving task {response['error']}')
+            raise RuntimeError(f'error during solving task {response["error"]}')
