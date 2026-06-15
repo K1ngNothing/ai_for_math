@@ -5,16 +5,22 @@ from utils import get_llm_api_key
 
 
 class Agent:
-    def __init__(self, log_level):
+    def __init__(self, log_level, model_config: dict | None = None):
         self.agent_name = ''
         self.color = ''
         self.log_level = log_level
 
         self.response_parser = ResponseParser()
         api_key = get_llm_api_key()
-        # self.llm =  LLM(api_key=api_key, model='gemini/gemini-3-flash-preview', temperature=1.0)
-        self.llm =  LLM(api_key=api_key, model='openai/gpt-4.1', temperature=0.7)
-        # self.llm =  LLM(api_key=api_key, model='openai/gpt-4.1-mini', temperature=0.7)
+        if model_config is None:
+            self.llm =  LLM(api_key=api_key, model='openai/gpt-4.1', temperature=0.7)
+            # self.llm =  LLM(api_key=api_key, model='gemini/gemini-3-flash-preview', temperature=1.0)
+            # self.llm =  LLM(api_key=api_key, model='openai/gpt-4.1-mini', temperature=0.7)
+        else:
+            self.llm = LLM(
+                api_key=api_key,
+                **model_config
+            )
 
     def _read_sys_prompt(self, file_path):
         try:
