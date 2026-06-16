@@ -46,7 +46,7 @@ class LLM:
 
         return ''.join(text_parts).strip()
 
-    def send_request(self, prompt, max_tokens = 8192):
+    def send_request(self, prompt, max_tokens = 16384):
         try:
             chain_of_thoughts_enabled = self.reasoning_effort is not None
             if not chain_of_thoughts_enabled:
@@ -92,6 +92,9 @@ class LLM:
             response.raise_for_status()
 
             result = response.json()
+            if result.get('status') == 'incomplete':
+                raise RuntimeError('Incomplete LLM answer: raise token limit')
+
             if chain_of_thoughts_enabled:
                 content = self._extract_responses_text(result)
             else:

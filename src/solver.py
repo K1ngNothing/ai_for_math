@@ -7,7 +7,7 @@ class Solver(Agent):
         model_config = {
             'host': 'https://api.proxyapi.ru/openai/v1',
             'model': 'o3',
-            'reasoning_effort': 'medium',
+            'reasoning_effort': 'low',
         }
         super().__init__(log_level, model_config)
 

@@ -14,8 +14,8 @@ class Agent:
         api_key = get_llm_api_key()
         if model_config is None:
             self.llm =  LLM(api_key=api_key, model='openai/gpt-4.1', temperature=0.7)
-            # self.llm =  LLM(api_key=api_key, model='gemini/gemini-3-flash-preview', temperature=1.0)
             # self.llm =  LLM(api_key=api_key, model='openai/gpt-4.1-mini', temperature=0.7)
+            # self.llm =  LLM(api_key=api_key, model='gemini/gemini-3-flash-preview', temperature=1.0)
         else:
             self.llm = LLM(
                 api_key=api_key,

@@ -16,13 +16,13 @@ class Coordinator:
     def solve(self, task):
         solution = self.solver.solve(task)
         feedback = self.checker.check(solution['solution'], solution['answer'])
-        if feedback['verdict'] == 'CORRECT':
+        if feedback['verdict'] == 'CORRECT' or feedback['verdict'] is None:
             return solution
 
         for _ in range(self.fixer_max_attempts):
             solution = self.fixer.fix(task, solution['solution'], feedback['issues'] + '\nVerdict is: ' + feedback['verdict'])
             feedback = self.checker.check(solution['solution'], solution['answer'])
-            if feedback['verdict'] == 'CORRECT':
+            if feedback['verdict'] == 'CORRECT' or feedback['verdict'] is None:
                 return solution
 
         raise RuntimeError("Coordinator: Fixer exceeded maximums attempts")

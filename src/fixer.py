@@ -4,7 +4,12 @@ from logTools import LogLevel
 
 class Fixer(Agent):
     def __init__(self, log_level):
-        super().__init__(log_level)
+        model_config = {
+            'host': 'https://api.proxyapi.ru/openai/v1',
+            'model': 'o3',
+            'reasoning_effort': 'low',
+        }
+        super().__init__(log_level, model_config)
 
         self.fixer_prompt = self._read_sys_prompt('prompts/fixer.txt')
         self.agent_name = 'Fixer'

@@ -4,7 +4,12 @@ from logTools import LogLevel
 
 class Checker(Agent):
     def __init__(self, log_level):
-        super().__init__(log_level)
+        model_config = {
+            'host': 'https://api.proxyapi.ru/openai/v1',
+            'model': 'o3',
+            'reasoning_effort': 'low',
+        }
+        super().__init__(log_level, model_config)
 
         self.sys_prompt = self._read_sys_prompt('prompts/checker.txt')
         self.agent_name = 'Checker'

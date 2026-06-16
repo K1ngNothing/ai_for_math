@@ -42,6 +42,14 @@ class ResponseParser:
             'full': response_text
         }
 
+    @staticmethod
+    def parse_verificator_response(response_text):
+        verdict_match = re.search(r'\[VERDICT\](.*?)\[/VERDICT\]', response_text, re.DOTALL)
+
+        return {
+            'verdict': verdict_match.group(1).strip() if verdict_match else "No verdict",
+            'full': response_text
+        }
 
 
 def test_parse_solver():
